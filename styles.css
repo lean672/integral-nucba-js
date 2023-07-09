@@ -1,0 +1,424 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+
+}
+nav{
+  background: #111111;
+  height: 80px;
+  width: 100%;
+
+}
+.enlace{
+  position: absolute;
+  padding: 20px 50px;
+}
+.logo{
+  height: 40px;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f1f1f1;
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+li a.active, li a:hover{
+  background: blue;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #f1f1f1;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.submenu{
+  position: relative;
+}
+.submenu img{
+  width: 45px;
+}
+.submenu #carrito{
+  display: none;
+}
+.submenu:hover #carrito{
+  display: block;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(10px);
+  top: 100%;
+  z-index: 1;
+  background-color: #4e4b5076;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 400px;
+}
+table{
+  width: 100%;
+}
+th{
+  color: #f1f1f1;
+}
+td{
+  color: #f1f1f1;
+}
+.borrar{
+  background-color: #e34e34;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 800;
+}
+.btn-2 {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #e85123;
+  color: #f1f1f1;
+  font-size: 14px;
+  margin-top: 25px;
+  border-radius: 25px;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #272727;
+  color: #fff;
+}
+
+.zapatillas-section {
+  padding: 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.container h2 {
+  background: linear-gradient(90deg, red 0%,orange 100%  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  justify-content: center;
+  font-size: 85px;
+}
+
+
+
+
+.hero {
+  background-color: #3331315e;
+  padding: 50px 0;
+  text-align: center;
+ 
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+
+.zapatillas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zapatilla-item {
+  margin: 0 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+}
+
+.zapatilla-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.zapatilla-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.zapatilla-item:hover {
+  transform: scale(1.1);
+}
+
+
+.zapatilla-item.active {
+  transform: scale(1.2);
+}
+
+.zapatilla-item.active img {
+  width: 200px;
+  height: 200px;
+}
+
+.zapatilla-item.active h3 {
+  display: block;
+}
+
+
+.zapatilla-item h4 {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+  text-align: justify;
+  
+}
+
+.zapatilla-item.active h4 {
+  display: block;
+  opacity: 1;
+}
+
+.nueva-seccion {
+  padding: 50px;
+  text-align: center;
+}
+
+.nueva-seccion .imagen img {
+ width: 100%;
+ max-width: 500px;
+ 
+ filter:invert(1);
+}
+
+.nueva-seccion .buscador {
+  margin-top: 20px;
+}
+
+.nueva-seccion .buscador form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nueva-seccion .buscador input[type="text"] {
+  padding: 10px;
+  width: 300px;
+}
+
+.nueva-seccion .buscador button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  margin-right: 30px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.social-links li,
+.contact-links li {
+  margin-bottom: 5px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: #222;
+  text-align: center;
+  padding: 10px 0;
+}
+.zapatilla_p {
+  width: 300px;
+  max-width: 300px;
+  border: 3px solid ;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.444) 0%,rgba(25, 17, 3, 0.664) 100%  );  
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 20px auto;
+ 
+}
+
+.zapatilla_p img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0; 
+ 
+}
+.zapatilla-content {
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.zapatilla_p h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.zapatilla_p p {
+  color: #f8f8f8;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+.container-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .checkbtn{
+    display: block;
+
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s ;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  li a:hover, li a.active{
+    background: none;
+    color: yellow;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  
+
+  
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+  .zapatillas-section {
+    padding: 20px;
+    
+  }
+  .zapatillas{
+    flex-direction: column;
+  }
+  .nueva-seccion {
+    padding: 30px;
+  }
+ 
+
+  .nueva-seccion .buscador form {
+    flex-direction: column;
+  }
+
+  .nueva-seccion .buscador input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-section:last-child {
+    margin-bottom: 0;
+  }
+
+
+
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .enlace{
+    padding-left: 20px;
+
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  
+  .hero {
+    padding: 100px 50px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+  .zapatillas-section {
+    padding: 30px;
+  }
+}}
