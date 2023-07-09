@@ -103,14 +103,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   })
   renderizarProductos()
 });
-
-
-
-
-
-
-
-
 menuToggle.addEventListener("click", () => {
   menuToggle.classList.toggle("open");
   menu.classList.toggle("open");
