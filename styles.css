@@ -318,6 +318,158 @@ body {
   gap: 15px;
 }
 
+.container_fondo{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5),  rgba(0, 0, 0, 0.5) ), url(https://jdesblog.s3.amazonaws.com/wp-content/uploads/2020/12/header-jordan-timeline-23.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+.form-box{
+  width: 90%;
+  max-width: 370px ;
+  height: 455px;
+  position: relative;
+  margin: 0 auto;
+  background: #fffefe8e;
+  padding: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+ 
+}
+.button-box{
+  width: 100%;
+  max-width: 300px;  
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #1c2331 ;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.toggle-btn{   
+  padding: 20px 20px ; 
+  height: 100%;
+  cursor: pointer;
+  background: transparent;
+  border: 0px;
+  outline: none ;
+  position: relative;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#elegir{
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background:  rgba(0, 188, 212, 0.7);
+  border-radius: 30px;
+  
+}
+
+
+#elegir2{
+  top: 0;
+  left:  0;
+  position: absolute;
+  width: 154px;
+  height: 100%;
+  background:  rgba(212, 0, 184, 0.7);
+  border-radius: 30px;
+  
+}
+
+.redes-sociales{
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  
+
+}
+.redes-sociales i{
+  width: 30px;
+  margin: 0 12px;   
+  cursor: pointer;
+  border-radius: 50%;
+ 
+}
+.input-group{
+    
+  width: 100%;
+  transition: 0.8s;
+  
+}
+.input-field{
+  width: 100%;
+  padding: 10px o;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #004d40 ;
+  outline: none;
+  background: transparent;
+
+}
+.submit-btn{
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background:  linear-gradient(to right, rgba(63, 81, 5181, 0.7), rgba(0, 188, 212, 0.7));
+  border: 0px ;
+  outline: none;
+  border-radius: 30px;
+}
+.check-box{
+  margin: 30px 10px 30px 0;
+}
+.rcontraeña {
+  color:#757575;
+  font-size:12px;
+  bottom: 64px;
+  position: absolute;    
+
+}
+
+
+.submit_a{
+  width: 85%;
+  padding: 7px ;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  background:  linear-gradient(to right, rgba(63, 81, 5181, 0.7), rgba(0, 188, 212, 0.7));
+  border: 0px ;
+  outline: none;
+  border-radius: 30px;
+  color: #111111;
+  
+}
+#login{
+  left: 50px;
+}
+#registrar{
+  left: 450px;
+}
+
 
 
 /* Estilos para dispositivos móviles */
