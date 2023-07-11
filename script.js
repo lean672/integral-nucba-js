@@ -7,6 +7,9 @@ const cartCount = document.querySelector(".cart-count");
 
 const formBusqueda = document.querySelector("#form-busqueda");
 
+getCartProducts = window.localStorage.getItem("cartProducts");
+let productosExists = getCartProducts ? JSON.parse(getCartProducts) : [];
+
 let cartItems = 0;
 
 const url = "https://shoes-collections.p.rapidapi.com/shoes/";
@@ -54,7 +57,12 @@ const listarProducto = (array) =>
         <div class="zapatilla-content"></div>       
         <h3>${producto.name}</h3>
         <p>$${producto.price}</p>
-        <button id="btnAgregarAlCarrito">Agregar al carrito</button>
+        <button onclick="functionAddItemToCart(${JSON.stringify(producto)
+          .replace(/'/g, "")
+          .replace(
+            /"/g,
+            "'"
+          )})" id="btnAgregarAlCarrito">Agregar al carrito</button>
       </div>
       `;
   });
@@ -109,52 +117,71 @@ zapatillaItems.forEach((item) => {
   });
 });
 
-const arrayCartItems = [
-  {
-    id: 1,
-    imagen: "",
-    nombre: "no se",
-    precio: 50,
-  },
-  {
-    id: 2,
-    imagen: "",
-    nombre: "no se 2",
-    precio: 30,
-  },
-  {
-    id: 3,
-    imagen: "",
-    nombre: "no se 3",
-    precio: 10,
-  },
-];
-
 //load cart content
 const cartContainer = document.getElementById("carrito");
 const cartItemList = document.getElementById("lista-carrito");
 const cartElementsContainer = document.getElementById("cartElements");
-const btnDeleteItemCart = document.querySelectorAll("#deleteItemCart");
+const btnDeleteCartItems = document.getElementById("vaciar-carrito");
 
-cartContainer.addEventListener("mouseover", () => {
-  console.log({ cartContainer });
-});
+const formatNameArticleCart = (name) => {
+  const shortValue = name.slice(0, 35);
+  if (shortValue.length > 34) {
+    return shortValue + "...";
+  } else {
+    return name;
+  }
+};
 
 const listarElementosCarrito = (array) =>
   array?.map((item) => {
-    const { id, imagen, nombre, precio } = item;
+    const { id, image, name, price } = item;
     return `
       <tr>
-        <th><img src="${imagen}"></th>
-        <th><h3>${nombre}</h3></th>
-        <th><p>$${precio}</p></th>
-        <th><button id="deleteItemCart"><i class="fa-solid fa-trash"></i></button></th>
+        <th><img src="${image}"></th>
+        <th><h3>${formatNameArticleCart(name)}</h3></th>
+        <th><p>$${price}</p></th>
+        <th><button onclick="deleteItemInCart(${id})" id="deleteItemCart"><i class="fa-solid fa-trash"></i></button></th>
       </tr>
       `;
   });
 
-const itemsCart = listarElementosCarrito(arrayCartItems);
+const itemsCart = listarElementosCarrito(productosExists);
 cartElementsContainer.innerHTML = itemsCart.join("");
+
+const btnDeleteItemCart = document.getElementById("deleteItemCart");
+
+const deleteItemInCart = (value) => {
+  for (let i = 0; i < productosExists.length; i++) {
+    if (productosExists[i].id === value) {
+      productosExists.splice(i, 1);
+    }
+  }
+  localStorage.setItem("cartProducts", JSON.stringify(productosExists));
+  const respuesta = listarElementosCarrito(productosExists);
+  cartElementsContainer.innerHTML = respuesta.join("");
+
+  return productosExists;
+};
+
+btnDeleteCartItems.addEventListener("click", () => {
+  const respuesta = [];
+  cartElementsContainer.innerHTML = respuesta.join("");
+  window.localStorage.setItem("cartProducts", JSON.stringify([]));
+  return (productosExists = []);
+});
+
+const functionAddItemToCart = (producto) => {
+  const productosExists = window.localStorage.getItem("cartProducts");
+  const products = productosExists ? JSON.parse(productosExists) : [];
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].id === producto.id) return;
+  }
+  const newArrayValues = [...products, producto];
+  window.localStorage.setItem("cartProducts", JSON.stringify(newArrayValues));
+
+  const respuesta = listarElementosCarrito(newArrayValues);
+  cartElementsContainer.innerHTML = respuesta.join("");
+};
 
 document.addEventListener("DOMContentLoaded", async () => {
   formBusqueda.addEventListener("submit", (e) => {
