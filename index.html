@@ -9,14 +9,14 @@
 
 <body>
   <header>
+      <a href="" class="enlace">
+        <img src="/carrito/1785348.png" alt="" class="logo">
+      </a>
     <nav>
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
         <i class="fa-solid fa-bars"></i>
       </label>
-      <a href="" class="enlace">
-        <img src="/carrito/1785348.png" alt="" class="logo">
-      </a>
       <ul>
         <li><a href="">inicio</a></li>
         <li><a href="nosotros_zap">sobre nosotros</a></li>
@@ -26,27 +26,25 @@
 
     </nav>
     <div>
-      <ul>
+      <ul class="submenu_2" >
         <li class="submenu">
           <img src="/carrito/bolsa-de-la-compra.png" id="img-carrito" alt="">
           <div id="carrito">
             <table id="lista-carrito">
               <thead>
                 <tr>
-                  <th>imagen</th>
-                  <th>nombre</th>
-                  <th>precio</th>
-                  <th></th>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Action</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="cartElements"></tbody>
             </table>
             <a href="" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
 
           </div>
-
         </li>
-
       </ul>
     </div>
   </header>
@@ -56,13 +54,12 @@
   <section class="zapatillas-section">
     <div class="container">
       <h2>Zapatillas Retro</h2>
-
     </div>
   </section>
 
   <section id="nosotros_zap" class="hero">
     <div class="container">
-      <h1>¡Descubre algunas de nuestras mejores zapatillas!!</h1>
+      <h1>¡Descubre algunas de nuestras mejores zapatillas!</h1>
       <div class="zapatillas">
         <div class="zapatilla-item">
           <img src="/modelos nike/air force 1.jpg" alt="Zapatilla 1">
